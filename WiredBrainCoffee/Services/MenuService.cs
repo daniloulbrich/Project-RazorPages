@@ -68,5 +68,32 @@ namespace WiredBrainCoffee.Services
                 }
             };
         }
+
+        public List<MenuItem> GetPopularItem()
+        {
+            return new List<MenuItem>()
+            {
+                new MenuItem()
+                {
+                    Name = "Mocha Latte",
+                    Summary = "Half coffee, half treat"
+                },
+                new MenuItem()
+                {
+                    Name = "Peppermint Hot Chocolate",
+                    Summary = "So good"
+                },
+                new MenuItem()
+                {
+                    Name = "Green Tea",
+                    Summary = "It's classic for a reason"
+                },
+                new MenuItem()
+                {
+                    Name = "Raspberry Coffe",
+                    Summary = "A fresh blend with a refreshing taste"
+                }
+            };
+        }
     }
 }

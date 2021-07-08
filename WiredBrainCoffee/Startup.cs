@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WiredBrainCoffee.Services;
 
 namespace WiredBrainCoffee
 {
@@ -32,6 +33,11 @@ namespace WiredBrainCoffee
             {
                 option.ConstraintMap.Add("promo", typeof(PromoConstraint));
             });
+            //Inyeccion de dependecias
+            services.AddScoped<IMenuService, MenuService>();
+
+            //Para manejo errores
+            services.AddLogging();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
