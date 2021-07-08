@@ -1,0 +1,18 @@
+﻿@page
+@model ConfirmationModel
+@{
+    ViewData["Title"] = "Contact";
+}
+<div class="container contact-container">
+    <h1 class="mt-4 mb-3">
+        Thank You!
+        <small> It's always great to hear from you...</small>
+    </h1>
+    <hr />
+    @if (!string.IsNullOrEmpty(Model.Message))
+    {
+        <h3>@Model.Message</h3>
+    }
+    <hr />
+    <p>You can contact us 555-666-7777</p>
+</div>
